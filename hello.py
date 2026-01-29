@@ -1,3 +1,3 @@
 print("Hello")
-print"Jenkins!")
+print("Jenkins!")
 print("Hello World from Jenkins + GitHub 🚀")
