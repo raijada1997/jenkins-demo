@@ -1,4 +1,11 @@
+#!/bin/bash
 set -e
-echo "---Build step---"
-python3 --version
-echo "Build Successful"
+
+echo "🔨 Building Go service"
+
+go version
+go mod tidy
+go build -o app
+
+echo "✅ Build completed"
+
