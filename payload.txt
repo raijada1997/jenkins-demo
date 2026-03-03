@@ -1110,12 +1110,13 @@ curl -X POST http://localhost:8080/record-metric \
   }
 }'
 
+
 curl -X POST http://localhost:8080/record-metric \
 -H "Content-Type: application/json" \
 -d '{
   "job": {
     "pipeline_name": "hci-rack-automation-install",
-    "rack_name": "F20L013",
+    "rack_name": "F20L014",
     "rack_ip": "10.48.112.27",
     "start_stage": "stage_2",
     "stop_stage": "svt",
@@ -1123,12 +1124,12 @@ curl -X POST http://localhost:8080/record-metric \
     "ocp_version": "4.22",
     "environment": "Dev",
     "lab_location": "RCH",
-    "install_type": "online",
+    "install_type": "offline",
     "storage_type": "Scale",
     "retry": false,
-    "jenkins_build_id": "9702",
-    "jenkins_build_url": "http://jenkins/job/9702",
-    "isf_operator_build_id": "2.15.1-9702",
+    "jenkins_build_id": "9802",
+    "jenkins_build_url": "http://jenkins/job/9802",
+    "isf_operator_build_id": "2.15.1-9802",
     "topology": "Standalone",
     "rack_type": "DELL",
     "is_production": false,
@@ -1155,10 +1156,10 @@ curl -X POST http://localhost:8080/record-metric \
   },
   "metrics": {
     "payload_type": "stage",
-    "stage_status": "in-progress",
+    "stage_status": "success",
     "stage": {
       "stage 2": {
-        "stage_status": "in-progress",
+        "stage_status": "success",
         "duration_seconds": 200
       }
     },
