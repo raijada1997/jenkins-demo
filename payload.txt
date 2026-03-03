@@ -1,0 +1,1172 @@
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "DevOps/DevOps-CI/fusion-hci-bvt-pipeline/HCI-Rack-Automation-BVT",
+    "rack_name": "F06L042",
+    "start_stage": "Stage 2",
+    "stop_stage": "SVT",
+    "fusion_version": "2.13.0",
+    "ocp_version": "4.20",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "online",
+    "storage_type": "ODF",
+    "topology": "Single Rack",
+    "rack_type": "DELL",
+    "retry": true,
+    "jenkins_build_id": "2501",
+    "isf_operator_build_id": "2.13.0-build2501"
+  },
+  "metrics": {
+    "status_job": "Failed",
+    "status_stage": "Failed",
+    "stage": [
+      {"stage_name":"Pull ISO","stage_status":"Success","duration_seconds":280},
+      {"stage_name":"MGen-Cleanup","stage_status":"Success","duration_seconds":190},
+      {"stage_name":"Stage 1","stage_status":"Success","duration_seconds":420},
+      {"stage_name":"Stage 2","stage_status":"Success","duration_seconds":120},
+      {"stage_name":"Storage","stage_status":"Failed","duration_seconds":250},
+      {"stage_name":"Services","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"BVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"FVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"SVT","stage_status":"Not Attempt","duration_seconds":0}
+    ]
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+
+
+
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "DevOps/DevOps-CI/fusion-hci-bvt-pipeline/HCI-Rack-Automation-BVT",
+    "rack_name": "F06L042",
+    "start_stage": "Stage 2",
+    "stop_stage": "SVT",
+    "fusion_version": "2.13.0",
+    "ocp_version": "4.20",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "online",
+    "storage_type": "ODF",
+    "topology": "Single Rack",
+    "rack_type": "DELL",
+    "retry": true,
+    "jenkins_build_id": "2001",
+    "isf_operator_build_id": "2.13.0-build2001"
+  },
+  "metrics": {
+    "status_job": "Failed",
+    "status_stage": "Failed",
+    "stage": [
+      {"stage_name":"Stage 2","stage_status":"Success","duration_seconds":390},
+      {"stage_name":"Storage","stage_status":"Failed","duration_seconds":200},
+      {"stage_name":"Services","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"BVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"FVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"SVT","stage_status":"Not Attempt","duration_seconds":0}
+    ]
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "DevOps/job/fusion-deploy/job/fusion-hci-upgrade/",
+    "rack_name": "F06L042",
+    "start_stage": "Pull ISO",
+    "stop_stage": "SVT",
+    "fusion_version": "2.13.0",
+    "ocp_version": "4.20",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "online",
+    "storage_type": "ODF",
+    "topology": "Single Rack",
+    "rack_type": "DELL",
+    "retry": false,
+    "jenkins_build_id": "1000",
+    "isf_operator_build_id": "2.13.0-build1001"
+  },
+  "metrics": {
+    "status_job": "Success",
+    "status_stage": "Success",
+    "stage": [
+      {"stage_name":"Pull ISO","stage_status":"Success","duration_seconds":280},
+      {"stage_name":"MGen-Cleanup","stage_status":"Success","duration_seconds":190},
+      {"stage_name":"Stage 1","stage_status":"Success","duration_seconds":420},
+      {"stage_name":"Stage 2","stage_status":"Success","duration_seconds":120},
+      {"stage_name":"Storage","stage_status":"Sucess","duration_seconds":250},
+      {"stage_name":"Services","stage_status":"Success","duration_seconds":200},
+      {"stage_name":"BVT","stage_status":"Success","duration_seconds":190},
+      {"stage_name":"FVT","stage_status":"Success","duration_seconds":590},
+      {"stage_name":"SVT","stage_status":"Success","duration_seconds":380}
+    ]
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+ "job":{
+   "pipeline_name":"DevOps/job/fusion-deploy/job/fusion-hci-upgrade/",
+   "rack_name":"F06L042",
+   "start_stage":"Pull ISO",
+   "stop_stage":"SVT",
+   "fusion_version":"2.13.0",
+   "ocp_version":"4.20",
+   "environment":"Dev",
+   "lab_location":"RCH",
+   "install_type":"offline",
+   "storage_type":"ODF",
+   "topology":"Single Rack",
+   "rack_type":"DELL",
+   "retry":false,
+   "jenkins_build_id":"1000"
+ },
+ "metrics":{
+   "status_job":"Failed",
+   "status_stage":"Failed",
+   "stage":[
+     {"stage_name":"Pull ISO","stage_status":"Success","duration_seconds":280},
+      {"stage_name":"MGen-Cleanup","stage_status":"Success","duration_seconds":190},
+      {"stage_name":"Stage 1","stage_status":"Success","duration_seconds":420},
+      {"stage_name":"Stage 2","stage_status":"Success","duration_seconds":120},
+      {"stage_name":"Storage","stage_status":"Failed","duration_seconds":310},
+      {"stage_name":"Services","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"BVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"FVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"SVT","stage_status":"Not Attempt","duration_seconds":0}
+   ]
+ },
+ "metadata":{"timestamp":"","source":"jenkins","version":"v1"}
+}'
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "DevOps/DevOps-CI/fusion-hci-bvt-pipeline/HCI-Rack-Automation-BVT",
+    "rack_name": "F06L050",
+    "start_stage": "Stage 1",
+    "stop_stage": "SVT",
+    "fusion_version": "2.13.0",
+    "ocp_version": "4.20",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "offline",
+    "storage_type": "ODF",
+    "topology": "Single Rack",
+    "rack_type": "DELL",
+    "retry": true,
+    "jenkins_build_id": "5003",
+    "isf_operator_build_id": "2.13.0-build5003"
+  },
+  "metrics": {
+    "status_job": "Failed",
+    "status_stage": "Failed",
+    "stage": [
+      {"stage_name":"Pull ISO","stage_status":"Success","duration_seconds":280},
+      {"stage_name":"MGen-Cleanup","stage_status":"Success","duration_seconds":190},
+      {"stage_name":"Stage 1","stage_status":"Success","duration_seconds":320},
+      {"stage_name":"Stage 2","stage_status":"Success","duration_seconds":200},
+      {"stage_name":"Storage","stage_status":"Success","duration_seconds":290},
+      {"stage_name":"Services","stage_status":"Failed","duration_seconds":190},
+      {"stage_name":"BVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"FVT","stage_status":"Not Attempt","duration_seconds":0},
+      {"stage_name":"SVT","stage_status":"Not Attempt","duration_seconds":0}
+    ]
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+ "job":{
+   "pipeline_name":"DevOps/job/fusion-deploy/job/fusion-hci-upgrade/",
+   "rack_name":"F07L015",
+   "start_stage":"Stage 2",
+   "stop_stage":"SVT",
+   "fusion_version":"2.13.1",
+   "ocp_version":"4.20",
+   "environment":"Dev",
+   "lab_location":"RTP",
+   "install_type":"offline",
+   "storage_type":"ODF",
+   "topology":"Single Rack",
+   "rack_type":"LENOVO",
+   "retry":true,
+   "jenkins_build_id":"3001",
+   "isf_operator_build_id":"2.13.1-build3001"
+ },
+ "metrics":{
+   "status_job":"Failed",
+   "status_stage":"Failed",
+   "stage":[
+     {"stage_name":"Pull ISO","stage_status":"success","duration_seconds":280},
+   ]
+ },
+ "metadata":{
+   "timestamp":"",
+   "source":"jenkins",
+   "version":"v1",
+
+ }
+}'
+
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+ "job":{
+  "pipeline_name":"hci-rack-automation-install",
+  "rack_name":"F06L303",
+  "start_stage":"Storage",
+  "stop_stage":"SVT",
+  "fusion_version":"2.14.0",
+  "ocp_version":"4.21",
+  "environment":"Dev",
+  "lab_location":"RCH",
+  "install_type":"online",
+  "storage_type":"ODF",
+  "retry":true,
+  "jenkins_build_id":"11000",
+  "isf_operator_build_id":"isf-2.14.0-11000",
+  "topology":"Single Rack",
+  "rack_type":"DELL"
+ },
+ "metrics":{
+  "status_stage":"Failed",
+  "stage":{
+   "Pull ISO":{"stage_status":"Success","duration_seconds":280},
+   "Stage 1":{"stage_status":"Success","duration_seconds":420},
+   "Stage 2":{"stage_status":"Failed","duration_seconds":0},
+   "Storage":{"stage_status":"Not Attempt","duration_seconds":0},
+   "Services":{"stage_status":"Not Attempt","duration_seconds":0},
+   "BVT":{"stage_status":"Not Attempt","duration_seconds":0},
+   "FVT":{"stage_status":"Not Attempt","duration_seconds":0},
+   "SVT":{"stage_status":"Not Attempt","duration_seconds":0}
+  }
+ },
+ "metadata":{"timestamp":"","source":"jenkins","version":"v1"}
+}'
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F05L405",
+    "start_stage": "Pull ISO",
+    "stop_stage": "SVT",
+    "fusion_version": "2.15.0",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RTP",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": false,
+    "jenkins_build_id": "10001",
+    "isf_operator_build_id": "isf-2.15.0-1006",
+    "topology": "Multi Rack",
+    "rack_type": "DELL"
+  },
+  "metrics": {
+    "status_stage": "In-progress",
+    "stage": {
+      "Pull ISO": {
+        "stage_status": "Success",
+        "duration_seconds": 280
+      }
+    }
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+
+}'
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+"job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F05L405",
+    "start_stage": "Pull ISO",
+    "stop_stage": "SVT",
+    "fusion_version": "2.15.0",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RTP",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": false,
+    "jenkins_build_id": "10005",
+    "isf_operator_build_id": "isf-2.15.0-1008",
+    "topology": "Multi Rack",
+    "rack_type": "DELL"
+  },
+  "metrics": {
+    "job_status": "In-progress",
+    "stage": {
+      "Pull ISO": {
+        "stage_status": "Success",
+        "duration_seconds": 420
+      }
+    }
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+1.
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+"job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F05L405",
+    "start_stage": "Pull ISO",
+    "stop_stage": "SVT",
+    "fusion_version": "2.15.0",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RTP",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": true,
+    "jenkins_build_id": "10003",
+    "isf_operator_build_id": "isf-2.15.0-1008",
+    "topology": "Multi Rack",
+    "rack_type": "DELL"
+  },
+  "metrics": {
+    "status_stage": "In-progress",
+    "stage": {
+      "Storage": {
+        "stage_status": "Success",
+        "duration_seconds": 420
+      }
+    }
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+"job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F05L406",
+    "start_stage": "Stage 2",
+    "stop_stage": "SVT",
+    "fusion_version": "2.15.0",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RTP",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": true,
+    "jenkins_build_id": "10009",
+    "isf_operator_build_id": "isf-2.15.0-1011",
+    "topology": "Multi Rack",
+    "rack_type": "DELL"
+  },
+  "metrics": {
+    "stage": {
+      "Storage": {
+        "stage_status": "Success",
+        "duration_seconds": 220
+      }
+    }
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+
+
+{
+    "job": {
+        "pipeline_name": "hci-rack-automation-install",
+        "rack_name": "F20L012",
+        "rack_ip": "10.48.112.27",
+        "start_stage": "Cleanup",
+        "stop_stage": "Cleanup",
+        "fusion_version": "2.13.0",
+        "ocp_version": "4.16",
+        "environment": "Dev",
+        "lab_location": "RCH",
+        "install_type": "online",
+        "storage_type": "Scale",
+        "retry": false,
+        "jenkins_build_id": "630",
+        "jenkins_build_url": "https://hyc-icps-team-jenkins.swg-devops.com/job/DevOps/job/DevOps-Lab/job/sachi-test/job/HCI-Rack_automation-test/630/",
+        "isf_operator_build_id": "2.13.0-20260227094908-linux.amd64",
+        "topology": "Standalone",
+        "rack_type": "DELL",
+        "is_production": false,
+        "production_version": "",
+        "node_configuration": "BASE 6 NODE",
+        "download_iso": "Yes",
+        "iso_build": "",
+        "upgrade_ocp": "No",
+        "offline_install": false,
+        "is_reinstall": false,
+        "skip_bvt": false,
+        "skip_fvt": false,
+        "bvt_build": true,
+        "svt_suite": "SVT_Common_WEEKLY* and SVT_HCI_WEEKLY*",
+        "df_test_suite": "",
+        "services_to_install": [
+            
+        ],
+        "enable_service_framework": false,
+        "run_util_calc": false,
+        "enable_mgen_update": false,
+        "automation_branch": "master",
+        "fusion_deploy_branch": "main",
+        "devops_branch": "debug-bvt-call",
+        "triggered_by": "ayush.d.patni@ibm.com"
+    },
+    "metrics": {
+        "payload_type": "stage",
+        "stage_status": "success",
+        "stage": {
+            "mgen_cleanup": {
+                "stage_status": "success",
+                "duration_seconds": 38
+            }
+        },
+        "job_status": ""
+    },
+    "metadata": {
+        "timestamp": "2026-02-27T18:37:29Z",
+        "source": "jenkins",
+        "version": "v1"
+    }
+}
+
+
+
+
+{
+    "job": {
+        "pipeline_name": "hci-rack-automation-install",
+        "rack_name": "F20L013",
+        "rack_ip": "10.48.112.27",
+        "start_stage": "Pull ISO",
+        "stop_stage": "SVT",
+        "fusion_version": "2.13.0",
+        "ocp_version": "4.16",
+        "environment": "Dev",
+        "lab_location": "RCH",
+        "install_type": "offline",
+        "storage_type": "Scale",
+        "retry": false,
+        "jenkins_build_id": "635",
+        "jenkins_build_url": "https://hyc-icps-team-jenkins.swg-devops.com/job/DevOps/job/DevOps-Lab/job/sachi-test/job/HCI-Rack_automation-test/630/",
+        "isf_operator_build_id": "2.13.0-20260227094908-linux.amd64",
+        "topology": "Standalone",
+        "rack_type": "DELL",
+        "is_production": false,
+        "production_version": "",
+        "node_configuration": "BASE 6 NODE",
+        "download_iso": "Yes",
+        "iso_build": "",
+        "upgrade_ocp": "No",
+        "offline_install": false,
+        "is_reinstall": false,
+        "skip_bvt": false,
+        "skip_fvt": false,
+        "bvt_build": true,
+        "svt_suite": "SVT_Common_WEEKLY* and SVT_HCI_WEEKLY*",
+        "df_test_suite": "",
+        "services_to_install": [
+            
+        ],
+        "enable_service_framework": false,
+        "run_util_calc": false,
+        "enable_mgen_update": false,
+        "automation_branch": "master",
+        "fusion_deploy_branch": "main",
+        "devops_branch": "debug-bvt-call",
+        "triggered_by": "ayush.d.patni@ibm.com"
+    },
+    "metrics": {
+        "payload_type": "stage",
+        "stage_status": "success",
+        "stage": {
+            "pull_iso": {
+                "stage_status": "success",
+                "duration_seconds": 185
+            }
+        },
+        "job_status": ""
+    },
+    "metadata": {
+        "timestamp": "",
+        "source": "jenkins",
+        "version": "v1"
+    }
+}
+
+
+
+job_paylaod
+{
+    "job": {
+        "pipeline_name": "hci-rack-automation-install",
+        "rack_name": "F20L012",
+        "rack_ip": "10.48.112.27",
+        "start_stage": "Cleanup",
+        "stop_stage": "Cleanup",
+        "fusion_version": "2.13.0",
+        "ocp_version": "4.16",
+        "environment": "Dev",
+        "lab_location": "RCH",
+        "install_type": "online",
+        "storage_type": "Scale",
+        "retry": false,
+        "jenkins_build_id": "630",
+        "jenkins_build_url": "https://hyc-icps-team-jenkins.swg-devops.com/job/DevOps/job/DevOps-Lab/job/sachi-test/job/HCI-Rack_automation-test/630/",
+        "isf_operator_build_id": "2.13.0-20260227094908-linux.amd64",
+        "topology": "Standalone",
+        "rack_type": "DELL",
+        "is_production": false,
+        "production_version": "",
+        "node_configuration": "BASE 6 NODE",
+        "download_iso": "Yes",
+        "iso_build": "",
+        "upgrade_ocp": "No",
+        "offline_install": false,
+        "is_reinstall": false,
+        "skip_bvt": false,
+        "skip_fvt": false,
+        "bvt_build": true,
+        "svt_suite": "SVT_Common_WEEKLY* and SVT_HCI_WEEKLY*",
+        "df_test_suite": "",
+        "services_to_install": [
+            
+        ],
+        "enable_service_framework": false,
+        "run_util_calc": false,
+        "enable_mgen_update": false,
+        "automation_branch": "master",
+        "fusion_deploy_branch": "main",
+        "devops_branch": "debug-bvt-call",
+        "triggered_by": "ayush.d.patni@ibm.com"
+    },
+    "metrics": {
+        "payload_type": "job",
+        "stage_status": "",
+        "stage": {
+            "pull_iso": {
+                "stage_status": "success",
+                "duration_seconds": 185
+            },
+            "mgen_cleanup": {
+                "stage_status": "success",
+                "duration_seconds": 38
+            }
+        },
+        "job_status": "SUCCESS"
+    },
+    "metadata": {
+        "timestamp": "2026-02-27T18:37:37Z",
+        "source": "jenkins",
+        "version": "v1"
+    }
+}
+
+
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+    "job": {
+        "pipeline_name": "fusion-hci-upgrade",
+        "rack_name": "F30L012",
+        "rack_ip": "10.48.112.27",
+        "start_stage": "Pull ISO",
+        "stop_stage": "SVT",
+        "fusion_version": "2.12.0",
+        "ocp_version": "4.16",
+        "environment": "Dev",
+        "lab_location": "RCH",
+        "install_type": "online",
+        "storage_type": "Scale",
+        "retry": false,
+        "jenkins_build_id": "638",
+        "jenkins_build_url": "https://hyc-icps-team-jenkins.swg-devops.com/job/DevOps/job/DevOps-Lab/job/sachi-test/job/HCI-Rack_automation-test/630/",
+        "isf_operator_build_id": "2.13.0-20260227094908-linux.amd64",
+        "topology": "Standalone",
+        "rack_type": "DELL",
+        "is_production": false,
+        "production_version": "",
+        "node_configuration": "BASE 6 NODE",
+        "download_iso": "Yes",
+        "iso_build": "",
+        "upgrade_ocp": "No",
+        "offline_install": false,
+        "is_reinstall": false,
+        "skip_bvt": false,
+        "skip_fvt": false,
+        "bvt_build": true,
+        "svt_suite": "SVT_Common_WEEKLY* and SVT_HCI_WEEKLY*",
+        "df_test_suite": "",
+        "services_to_install": [
+            
+        ],
+        "enable_service_framework": false,
+        "run_util_calc": false,
+        "enable_mgen_update": false,
+        "automation_branch": "master",
+        "fusion_deploy_branch": "main",
+        "devops_branch": "debug-bvt-call",
+        "triggered_by": "ayush.d.patni@ibm.com"
+    },
+    "metrics": {
+        "payload_type": "stage",
+        "stage_status": "Failed",
+        "stage": {
+            "Stage 1": {
+                "stage_status": "Failed",
+                "duration_seconds": 185
+            }
+        },
+        "job_status": ""
+    },
+    "metadata": {
+        "timestamp": "",
+        "source": "jenkins",
+        "version": "v1"
+    }   
+}'
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+    "job": {
+        "pipeline_name": "hci-rack-automation-install",
+        "rack_name": "F30L013",
+        "rack_ip": "10.48.112.27",
+        "start_stage": "Stage 1",
+        "stop_stage": "SVT",
+        "fusion_version": "2.12.0",
+        "ocp_version": "4.16",
+        "environment": "Dev",
+        "lab_location": "RCH",
+        "install_type": "offline",
+        "storage_type": "Scale",
+        "retry": false,
+        "jenkins_build_id": "900",
+        "jenkins_build_url": "https://hyc-icps-team-jenkins.swg-devops.com/job/DevOps/job/DevOps-Lab/job/sachi-test/job/HCI-Rack_automation-test/630/",
+        "isf_operator_build_id": "2.13.0-20260227094908-linux.amd64",
+        "topology": "Standalone",
+        "rack_type": "DELL",
+        "is_production": false,
+        "production_version": "",
+        "node_configuration": "BASE 6 NODE",
+        "download_iso": "Yes",
+        "iso_build": "",
+        "upgrade_ocp": "No",
+        "offline_install": false,
+        "is_reinstall": false,
+        "skip_bvt": false,
+        "skip_fvt": false,
+        "bvt_build": true,
+        "svt_suite": "SVT_Common_WEEKLY* and SVT_HCI_WEEKLY*",
+        "df_test_suite": "",
+        "services_to_install": [
+            
+        ],
+        "enable_service_framework": false,
+        "run_util_calc": false,
+        "enable_mgen_update": false,
+        "automation_branch": "master",
+        "fusion_deploy_branch": "main",
+        "devops_branch": "debug-bvt-call",
+        "triggered_by": "ayush.d.patni@ibm.com"
+    },
+    "metrics": {
+        "payload_type": "stage",
+        "stage_status": "In-progress",
+        "stage": {
+            "Stage 1": {
+                "stage_status": "In-progress",
+                "duration_seconds": 185
+            }
+        },
+        "job_status": ""
+    },
+    "metadata": {
+        "timestamp": "",
+        "source": "jenkins",
+        "version": "v1"
+    }   
+}'
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '
+   {
+  "job": {
+    "pipeline_name": "fusion-hci-upgrade",
+    "rack_name": "F50L002",
+    "rack_ip": "10.48.130.11",
+    "start_stage": "mgen_cleanup",
+    "stop_stage": "svt",
+    "fusion_version": "2.17.0",
+    "ocp_version": "4.23",
+    "environment": "Prod",
+    "lab_location": "RTP",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": false,
+    "jenkins_build_id": "903",
+    "jenkins_build_url": "https://jenkins/upgrade/903",
+    "isf_operator_build_id": "2.17.0-903",
+    "topology": "Multi Rack",
+    "rack_type": "HPE",
+    "is_production": true,
+    "production_version": "2.17.0",
+    "node_configuration": "BASE 8 NODE",
+    "download_iso": "Yes",
+    "iso_build": "",
+    "upgrade_ocp": "Yes",
+    "offline_install": false,
+    "is_reinstall": false,
+    "skip_bvt": false,
+    "skip_fvt": false,
+    "bvt_build": true,
+    "svt_suite": "SVT_WEEKLY",
+    "df_test_suite": "",
+    "services_to_install": [],
+    "enable_service_framework": false,
+    "run_util_calc": false,
+    "enable_mgen_update": false,
+    "automation_branch": "release",
+    "fusion_deploy_branch": "release",
+    "devops_branch": "release",
+    "triggered_by": "demo@ibm.com"
+  },
+  "metrics": {
+    "payload_type": "job",
+    "stage_status": "",
+    "stage": {
+      "mgen_cleanup": {"stage_status": "SUCCESS", "duration_seconds": 70},
+      "stage_1": {"stage_status": "SUCCESS", "duration_seconds": 150},
+      "stage_2": {"stage_status": "SUCCESS", "duration_seconds": 140},
+      "storage": {"stage_status": "SUCCESS", "duration_seconds": 180},
+      "services": {"stage_status": "SUCCESS", "duration_seconds": 120},
+      "fvt": {"stage_status": "SUCCESS", "duration_seconds": 80},
+      "bvt": {"stage_status": "SUCCESS", "duration_seconds": 90},
+      "svt": {"stage_status": "SUCCESS", "duration_seconds": 100}
+    },
+    "job_status": "SUCCESS"
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+
+}'
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '
+{
+  "job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F50L002",
+    "rack_ip": "10.48.130.11",
+    "start_stage": "pull ISO",
+    "stop_stage": "svt",
+    "fusion_version": "2.17.0",
+    "ocp_version": "4.23",
+    "environment": "Prod",
+    "lab_location": "RTP",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": false,
+    "jenkins_build_id": "906",
+    "jenkins_build_url": "https://jenkins/install/904",
+    "isf_operator_build_id": "2.17.0-904",
+    "topology": "Multi Rack",
+    "rack_type": "HPE",
+    "is_production": true,
+    "production_version": "2.17.0",
+    "node_configuration": "BASE 8 NODE",
+    "download_iso": "Yes",
+    "iso_build": "",
+    "upgrade_ocp": "Yes",
+    "offline_install": false,
+    "is_reinstall": false,
+    "skip_bvt": false,
+    "skip_fvt": false,
+    "bvt_build": true,
+    "svt_suite": "SVT_WEEKLY",
+    "df_test_suite": "",
+    "services_to_install": ["MCM","OCS"],
+    "enable_service_framework": false,
+    "run_util_calc": false,
+    "enable_mgen_update": false,
+    "automation_branch": "release",
+    "fusion_deploy_branch": "release",
+    "devops_branch": "release",
+    "triggered_by": "demo@ibm.com"
+  },
+  "metrics": {
+    "payload_type": "stage",
+    "stage_status": "success",
+    "stage": {
+      "mgen_cleanup": {"stage_status": "success", "duration_seconds": 150}
+    },
+    "job_status": ""
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F20L012",
+    "rack_ip": "10.48.112.27",
+    "start_stage": "Stage 1",
+    "stop_stage": "svt",
+    "fusion_version": "2.15.0",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": false,
+    "jenkins_build_id": "7002",
+    "jenkins_build_url": "http://jenkins/job/7002",
+    "isf_operator_build_id": "2.15.0-7002",
+    "topology": "Standalone",
+    "rack_type": "DELL",
+    "is_production": false,
+    "production_version": "",
+    "node_configuration": "BASE 6 NODE",
+    "download_iso": "Yes",
+    "iso_build": "",
+    "upgrade_ocp": "No",
+    "offline_install": false,
+    "is_reinstall": false,
+    "skip_bvt": false,
+    "skip_fvt": false,
+    "bvt_build": true,
+    "svt_suite": "SVT_Common",
+    "df_test_suite": "",
+    "services_to_install": [],
+    "enable_service_framework": false,
+    "run_util_calc": false,
+    "enable_mgen_update": false,
+    "automation_branch": "master",
+    "fusion_deploy_branch": "main",
+    "devops_branch": "debug",
+    "triggered_by": "tester@ibm.com"
+  },
+  "metrics": {
+    "payload_type": "stage",
+    "stage_status": "FAILED",
+    "stage": {
+      "Storage": {
+        "stage_status": "FAILED",
+        "duration_seconds": 120
+      }
+    },
+    "job_status": ""
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F20L012",
+    "rack_ip": "10.48.112.27",
+    "start_stage": "storage",
+    "stop_stage": "svt",
+    "fusion_version": "2.15.0",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": true,
+    "jenkins_build_id": "7004",
+    "jenkins_build_url": "http://jenkins/job/7004",
+    "isf_operator_build_id": "2.15.0-7004",
+    "topology": "Standalone",
+    "rack_type": "DELL",
+    "is_production": false,
+    "production_version": "",
+    "node_configuration": "BASE 6 NODE",
+    "download_iso": "Yes",
+    "iso_build": "",
+    "upgrade_ocp": "No",
+    "offline_install": false,
+    "is_reinstall": false,
+    "skip_bvt": false,
+    "skip_fvt": false,
+    "bvt_build": true,
+    "svt_suite": "SVT_Common",
+    "df_test_suite": "",
+    "services_to_install": [],
+    "enable_service_framework": false,
+    "run_util_calc": false,
+    "enable_mgen_update": false,
+    "automation_branch": "master",
+    "fusion_deploy_branch": "main",
+    "devops_branch": "debug",
+    "triggered_by": "tester@ibm.com"
+  },
+  "metrics": {
+    "payload_type": "stage",
+    "stage_status": "SUCCESS",
+    "stage": {
+      "Services": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 120
+      }
+    },
+    "job_status": ""
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F20L012",
+    "rack_ip": "10.48.112.27",
+    "start_stage": "pull_iso",
+    "stop_stage": "svt",
+    "fusion_version": "2.15.0",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": false,
+    "jenkins_build_id": "9501",
+    "jenkins_build_url": "http://jenkins/job/9501",
+    "isf_operator_build_id": "2.15.0-9501",
+    "topology": "Standalone",
+    "rack_type": "DELL",
+    "is_production": false,
+    "production_version": "",
+    "node_configuration": "BASE 6 NODE",
+    "download_iso": "Yes",
+    "iso_build": "",
+    "upgrade_ocp": "No",
+    "offline_install": false,
+    "is_reinstall": false,
+    "skip_bvt": false,
+    "skip_fvt": false,
+    "bvt_build": true,
+    "svt_suite": "SVT_Common",
+    "df_test_suite": "",
+    "services_to_install": [],
+    "enable_service_framework": false,
+    "run_util_calc": false,
+    "enable_mgen_update": false,
+    "automation_branch": "master",
+    "fusion_deploy_branch": "main",
+    "devops_branch": "release",
+    "triggered_by": "tester@ibm.com"
+  },
+  "metrics": {
+    "payload_type": "stage",
+    "stage_status": "Success",
+    "stage": {
+      "pull_iso": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "mgen_cleanup": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "stage 1": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "stage 2": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "storage": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "services": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "fvt": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "bvt": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      },
+      "svt": {
+        "stage_status": "SUCCESS",
+        "duration_seconds": 180
+      }
+    },
+    "job_status": "success"
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'
+
+curl -X POST http://localhost:8080/record-metric \
+-H "Content-Type: application/json" \
+-d '{
+  "job": {
+    "pipeline_name": "hci-rack-automation-install",
+    "rack_name": "F20L013",
+    "rack_ip": "10.48.112.27",
+    "start_stage": "stage_2",
+    "stop_stage": "svt",
+    "fusion_version": "2.15.1",
+    "ocp_version": "4.22",
+    "environment": "Dev",
+    "lab_location": "RCH",
+    "install_type": "online",
+    "storage_type": "Scale",
+    "retry": false,
+    "jenkins_build_id": "9702",
+    "jenkins_build_url": "http://jenkins/job/9702",
+    "isf_operator_build_id": "2.15.1-9702",
+    "topology": "Standalone",
+    "rack_type": "DELL",
+    "is_production": false,
+    "production_version": "",
+    "node_configuration": "BASE 6 NODE",
+    "download_iso": "Yes",
+    "iso_build": "",
+    "upgrade_ocp": "No",
+    "offline_install": false,
+    "is_reinstall": false,
+    "skip_bvt": false,
+    "skip_fvt": false,
+    "bvt_build": true,
+    "svt_suite": "SVT_Common",
+    "df_test_suite": "",
+    "services_to_install": [],
+    "enable_service_framework": false,
+    "run_util_calc": false,
+    "enable_mgen_update": false,
+    "automation_branch": "master",
+    "fusion_deploy_branch": "main",
+    "devops_branch": "release",
+    "triggered_by": "tester@ibm.com"
+  },
+  "metrics": {
+    "payload_type": "stage",
+    "stage_status": "in-progress",
+    "stage": {
+      "stage 2": {
+        "stage_status": "in-progress",
+        "duration_seconds": 200
+      }
+    },
+    "job_status": ""
+  },
+  "metadata": {
+    "timestamp": "",
+    "source": "jenkins",
+    "version": "v1"
+  }
+}'

@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: dashboard-demo
+  labels: 
+    app: dashboard-demo
+spec:
+  to:
+    kind: Service
+    name: dashboard-demo
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None  

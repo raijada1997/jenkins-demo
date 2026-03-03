@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-demo
+  labels:
+    app: dashboard-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dashboard-demo
+  template:
+    metadata:
+      labels:
+        app: dashboard-demo
+    spec:
+      containers:
+        - name: dashboard-demo
+          image: docker-na-public.artifactory.swg-devops.com/hyc-abell-devops-team-dev-docker-local/dashboard-metric/image:1.0 
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ELASTIC_URL
+              value: "http://elasticsearch-sample-es-http:9200"
+            - name: USERNAME
+              valueFrom:
+                  secretKeyRef:
+                    name: elastic-credentials
+                    key: USERNAME
+            - name: PASSWORD
+              valueFrom:
+                  secretKeyRef:
+                    name: elastic-credentials
+                    key: PASSWORD
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 20          
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "200m"

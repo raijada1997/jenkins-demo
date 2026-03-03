@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard-demo
+  labels:
+    app: dashboard-demo
+spec:
+  selector:
+    app: dashboard-demo
+  ports:
+    - port: 8080
+      targetPort: 8080
